@@ -7,7 +7,9 @@ Cilj seminarskog rada jeste bilo predviđanje cene smeštaja u Indiji.
 
 Sadržaj seminarskog rada: 
     1. Učitavanje podataka i biblioteka 
+    
     2. Analiza i obrada nedostajućih vrednosti
+    
     3. Analiza i vizuelizacija postojećih prediktora 
     4. Feature engineering - dodavanje novih promenljivih na osnovu postojećih 
     5. Pregled i analiza smeštaja koji se nalaze samo u Indiji 
