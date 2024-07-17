@@ -2247,13 +2247,13 @@ prediction_RF <- predict(rf_model_2, newdata = x_test)
 ```
 Metrike: 
 ```{r}
-mae_ridge = MAE(y_test, prediction_RF)
-rmse_ridge = RMSE(y_test, prediction_RF)
-r2_ridge = R2(y_test, prediction_RF)
+mae_rf = MAE(y_test, prediction_RF)
+rmse_rf = RMSE(y_test, prediction_RF)
+r2_rf = R2(y_test, prediction_RF)
 
-cat("RF => MAE: ", mae_lasso, "\n")
-cat("RF => RMSE: ", rmse_ridge, "\n")
-cat("RF => R^2: ", r2_lasso, "\n\n")
+cat("RF => MAE: ", mae_rf, "\n")
+cat("RF => RMSE: ", rmse_rf, "\n")
+cat("RF => R^2: ", r2_rf, "\n\n")
 ```
 
 Grafički prikaz RF-a: 
@@ -2295,12 +2295,12 @@ data = data.frame(actual = test_data$price_log,
 ggplot(data, aes(x = actual, y = predicted)) +
   geom_point(color = "darkorange", alpha = 0.5) +
   geom_abline(intercept = 0, slope = 1,  color = "red", linewidth = 1)+
-    labs(title = "Stvarne vs. Predviđene vrednosti ()",
+    labs(title = "Stvarne vs. Predviđene vrednosti (KNN)",
          x = "Stvarne vrednosti",
          y = "Predviđene vrednosti") +
   theme_minimal()
 ```
 
-KNN ima najbolju adjusted R2 meru (iznosi 0.31) čime predstavlja najbolji model od svih prethodnih koji su testirani na ovom testnom skupu. 
+RF ima najbolju adjusted R2 meru (iznosi 0.36) čime predstavlja najbolji model od svih koji su testirani na ovom testnom skupu. 
 
 
